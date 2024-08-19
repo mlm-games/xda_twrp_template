@@ -22,12 +22,12 @@ link="$4"
 echo "Device: $name"
 
 # Create the template file
-cp xda tmp.txt
+cp xda_template tmp.txt
 
 # Replace placeholders with the provided values
-sed -i -e "s/brandname/$brand/g" tmp.txt
-sed -i -e "s/devicename/$name/g" tmp.txt
-sed -i -e "s|downloadlink|$link|g" tmp.txt
+sed -i -e "s/{{brand}}/$brand/g" tmp.txt
+sed -i -e "s/{{device}}/$name/g" tmp.txt
+sed -i -e "s|{{link}}|$link|g" tmp.txt
 
 # Rename the file to match the TWRP format
 output_file="[RECOVERY][TWRPBuilder] TWRP For $brand $name"

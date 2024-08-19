@@ -1,55 +1,69 @@
-[CENTER][IMG="logo"]https://i.imgur.com/8IbdLhE.png[/IMG][/CENTER]
+[CENTER][IMG="logo"]https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/04/TWRP-logo-feature.png[/IMG][/CENTER]
 
-[CODE]#include <std_disclaimer.h>
-/*
+[CODE]
+
 * We are not responsible for bricked devices, dead SD cards,
 * thermonuclear war, or you getting fired because the alarm app failed. Please
 * do some research if you have any concerns about features included in this APP
 * before installing it! YOU are choosing to make these modifications, and if
 * you point the finger at us for messing up your device, We will laugh at you.
-*/[/CODE]
 
-[CENTER][COLOR="DarkSlateGrey"][SIZE="4"][B]TWRP Recovery for #brand #device[/B][/SIZE][/COLOR] [/CENTER]
+[/CODE]
 
-[COLOR="DarkSlateGrey"][SIZE="4"][B]What is TWRP?[/B][/SIZE][/COLOR]
-[URL="http://twrp.me"]Team Win Recovery Project[/URL] 3.x, or twrp for short, is a custom recovery built with ease of use and customization in mind. Its a fully touch driven user interface no more volume rocker or power buttons to mash. The GUI is also fully XML driven and completely theme-able. You can change just about every aspect of the look and feel.
+
+[CENTER][COLOR="Violet"][SIZE="4"][B]TWRP Recovery for {{brand}} {{device}}[/B][/SIZE][/COLOR] [/CENTER]
+
+
+[COLOR="Violet"][SIZE="4"][B]What is TWRP?[/B][/SIZE][/COLOR]
+[URL="https://twrp.me"]Team Win Recovery Project[/URL] 3.x, or twrp for short, is a custom recovery built with ease of use and customization in mind. Its a fully touch driven user interface no more volume rocker or power buttons to mash. The GUI is also fully XML driven and completely theme-able. You can change just about every aspect of the look and feel.
 In short: It allows you to back up and restore your data, flash custom ROMs to your device, repair broken file systems, and root your device.
 
-[COLOR="DarkSlateGrey"][SIZE="4"][B]KNOWN LIMITATIONS:[/B][/SIZE][/COLOR]
-The following are some known limitations due to either the design nature or a problem with ROM themselves. Please read carefully :-
-- Make sure to read the readme of the [URL="#link"]device tree[URL] once as it may contain specific info regarding the device.
-- You can flash magisk 27.0 zip from twrp, but make sure to not reboot once you have entered the device after factory reset and checking if the OEM unlocking option is greyed-out/visible, or it can cause a bootloop. Also open magisk once after that
+[COLOR="Violet"][SIZE="4"][B]KNOWN LIMITATIONS:[/B][/SIZE][/COLOR]
+The following are some known limitations either due to the design nature of Samsung devices or a problem with ROM themselves. Please read carefully :-
+- Make sure to read the readme of the [URL="{{link}}"]device tree[/URL] once as it may contain specific info regarding the device.
+- You can flash magisk 27.0 zip from twrp, but make sure to not reboot once you have entered the device after factory reset and checking if the OEM unlocking option is greyed-out/visible, or it can cause a bootloop. Also open magisk once after that.
+- YOU WILL LOSE YOUR DATA/INTERNAL-STORAGE WHEN YOU RUN MULTIDISABLER AND CLEAR DATA. So backup everything beforehand
 
-[COLOR="DarkSlateGrey"][SIZE="4"][B]Downloads:[/B][/SIZE][/COLOR]
-[B][SIZE="3"]- Recovery:[/SIZE][/B] 
-[SIZE="3"][CENTER][URL="#link"]Download Here[/URL][/CENTER][/SIZE]
-[B][SIZE="3"]- App:[/SIZE][/B] 
-[SIZE="3"][CENTER][URL="https://twrpbuilder.github.io/#article_download"]Download Here[/URL][/CENTER][/SIZE]
 
-[COLOR="DarkSlateGrey"][SIZE="4"][B]INSTRUCTIONS:[/B][/SIZE][/COLOR]
+[COLOR="Violet"][SIZE="4"][B]Downloads:[/B][/SIZE][/COLOR]
 
-## Using odin [B]"bootloader must be unlocked!"[/B]
+[B][SIZE="3"]Recovery:[/SIZE][/B] 
+[SIZE="5"][CENTER][URL="{{link}}"]Download Here (in releases, towards the right)[/URL][/CENTER][/SIZE]
+
+
+[COLOR="Violet"][SIZE="4"][B]INSTRUCTIONS:[/B][/SIZE][/COLOR]
+
+[LIST=1]
+[*][B] Using Odin: [COLOR="red"]"bootloader must be unlocked!"[/COLOR][/B]
+
 [CODE]adb reboot download[/CODE]
 
-For linux, use odin4 (Use Odin or heimdall in linux, tutorial: [URL="https://technastic.com/flash-firmware-update-samsung-odin/"]click here[/URL]
+For linux, use odin4 (Use Odin3 or heimdall in windows, tutorial: [URL="https://technastic.com/flash-firmware-update-samsung-odin/"]click here[/URL]
 [CODE]./odin4 -l[/CODE]
 
 - You will get the output of the device path (which you should enter after -d below) in download mode,
 
 [CODE]./odin4 -d <device-path> -a <path-to-recovery>[/CODE]
-- Reboot to recovery immediately and run multidisabler (reboot to recovery if it doesnt show 'finished' in the end).
-- After it shows finished go 
+- Reboot to recovery immediately and (if u want to disable encryption, and the recovery getting replaced,) run multidisabler by typing multidisabler in advanced -> terminal -> press enter (reboot to recovery if it doesnt show 'finished' in the end, and then rerun it).
+- After it shows finished, clear data (yes) and reboot to system
 
-TWRP install (requires TWRP 2.8.4 or higher already installed):
+
+
+[*][B] TWRP install requires TWRP 2.8.4 or higher already installed):[/B]
+
 - Reboot to TWRP
 - Hit  the "Install" button
 - Browse to the location of the TWRP image on your device and select it (tap the "Install Image" button in the lower right if it is not visible so that it shows the image list)
 - Select recovery from the partition list and swipe to flash
+[/LIST]
 
-[COLOR="DarkSlateGrey"][SIZE="4"][B]Bugs:[/B][/SIZE][/COLOR]
+
+[COLOR="Violet"][SIZE="4"][B]Bugs:[/B][/SIZE][/COLOR]
 - Encryption doesnt work
+- touch works after a delay after turning the screen off and on.
 
-[COLOR="DarkSlateGrey"][SIZE="4"][B]Basic Info:[/B][/SIZE][/COLOR]
+
+[COLOR="Violet"][SIZE="4"][B]Basic Info:[/B][/SIZE][/COLOR]
 [LIST]
 [*]This project is not supported or affiliated in any way with the original TWRP (TeamWin Recovery Project).
 [*]So do not go to their github and open issues for any particular device's problems
@@ -58,4 +72,8 @@ TWRP install (requires TWRP 2.8.4 or higher already installed):
 
 Also thanks to @ravindu_deshan for making me go down this path (with me starting out by trying to debug his twrp (the device didnt have a touch driver) and testing his fastboot patcher)
 
-Donation: Thumbs up 👍 the post or star the device tree in Github, for telling that it works or showing your appreciation...
+
+[COLOR="Violet"][SIZE="4"][B]Donation:[/B][/SIZE][/COLOR]
+[COLOR="LightGreen"]-> Consider giving the post a Thumbs up (👍)
+(or) 
+-> Star the device tree in Github, for telling that it works or showing your appreciation...[/COLOR]
