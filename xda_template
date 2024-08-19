@@ -30,6 +30,9 @@ The following are some known limitations either due to the design nature of Sams
 [B][SIZE="3"]Recovery:[/SIZE][/B] 
 [SIZE="5"][CENTER][URL="{{link}}"]Download Here (in releases, towards the right)[/URL][/CENTER][/SIZE]
 
+[COLOR="Violet"][SIZE="4"][B]PREREQUISITES:[/B][/SIZE][/COLOR]
+- Unlocked Bootloader
+- Flashed a null vbmeta image or disabled vbmeta image
 
 [COLOR="Violet"][SIZE="4"][B]INSTRUCTIONS:[/B][/SIZE][/COLOR]
 
