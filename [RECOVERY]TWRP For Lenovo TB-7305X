@@ -11,7 +11,7 @@
 [/CODE]
 
 
-[CENTER][COLOR="Violet"][SIZE="4"][B]TWRP Recovery for {{brand}} {{device}}[/B][/SIZE][/COLOR] [/CENTER]
+[CENTER][COLOR="Violet"][SIZE="4"][B]TWRP Recovery for Lenovo TB-7305X[/B][/SIZE][/COLOR] [/CENTER]
 
 
 [COLOR="Violet"][SIZE="4"][B]What is TWRP?[/B][/SIZE][/COLOR]
@@ -19,36 +19,25 @@
 In short: It allows you to back up and restore your data, flash custom ROMs to your device, repair broken file systems, and root your device.
 
 [COLOR="Violet"][SIZE="4"][B]KNOWN LIMITATIONS:[/B][/SIZE][/COLOR]
-The following are some known limitations either due to the design nature of Samsung devices or a problem with ROM themselves. Please read carefully :-
-- Make sure to read the readme of the [URL="{{link}}"]device tree[/URL] once as it may contain specific info regarding the device.
-- You can flash magisk 27.0 zip from twrp, but make sure to not reboot once you have entered the device after factory reset and checking if the OEM unlocking option is greyed-out/visible, or it can cause a bootloop. Also open magisk once after that.
-- YOU WILL LOSE YOUR DATA/INTERNAL-STORAGE WHEN YOU RUN MULTIDISABLER AND CLEAR DATA. So backup everything beforehand
-
+- Make sure to read the readme of the [URL="https://github.com/mlm-games/twrp_lenovo_7305x_m7_mt8765_P"]device tree[/URL] once as it may contain specific info regarding the device.
 
 [COLOR="Violet"][SIZE="4"][B]Downloads:[/B][/SIZE][/COLOR]
 
 [B][SIZE="3"]Recovery:[/SIZE][/B] 
-[SIZE="5"][CENTER][URL="{{link}}"]Download Here (in releases, towards the right)[/URL][/CENTER][/SIZE]
+[SIZE="5"][CENTER][URL="https://github.com/mlm-games/twrp_lenovo_7305x_m7_mt8765_P"]Download Here (in releases, towards the right)[/URL][/CENTER][/SIZE]
 
 [COLOR="Violet"][SIZE="4"][B]PREREQUISITES:[/B][/SIZE][/COLOR]
 - Unlocked Bootloader
-- Flashed a null vbmeta image or disabled vbmeta image
 
 [COLOR="Violet"][SIZE="4"][B]INSTRUCTIONS:[/B][/SIZE][/COLOR]
 
 [LIST=1]
-[*][B] Using Odin: [COLOR="red"]"bootloader must be unlocked!"[/COLOR][/B]
+[*][B] Using fastboot: [COLOR="red"]"bootloader must be unlocked!"[/COLOR][/B]
 
-[CODE]adb reboot download[/CODE]
+[CODE]adb reboot bootloader[/CODE]
 
-For linux, use odin4 (Use Odin3 or heimdall in windows, tutorial: [URL="https://technastic.com/flash-firmware-update-samsung-odin/"]click here[/URL]
-[CODE]./odin4 -l[/CODE]
-
-- You will get the output of the device path (which you should enter after -d below) in download mode,
-
-[CODE]./odin4 -d <device-path> -a <path-to-recovery>[/CODE]
-- Reboot to recovery immediately and (if u want to disable encryption, and the recovery getting replaced,) run multidisabler by typing multidisabler in advanced -> terminal -> press enter (reboot to recovery if it doesnt show 'finished' in the end, and then rerun it).
-- After it shows finished, clear data (yes) and reboot to system
+[CODE]fastboot flash recovery <recovery-name>.img[/CODE]
+- Reboot to recovery immediately and twrp should be present.
 
 
 
@@ -62,21 +51,15 @@ For linux, use odin4 (Use Odin3 or heimdall in windows, tutorial: [URL="https://
 
 
 [COLOR="Violet"][SIZE="4"][B]Bugs:[/B][/SIZE][/COLOR]
-- Encryption doesnt work
-- touch works after a delay after turning the screen off and on.
+- Cant see /data files as decryption doesnt work
 
 
 [COLOR="Violet"][SIZE="4"][B]Basic Info:[/B][/SIZE][/COLOR]
 [LIST]
-[*]This project is not supported or affiliated in any way with the original TWRP (TeamWin Recovery Project).
-[*]So do not go to their github and open issues for any particular device's problems
 [*]Take [URL="https://xdaforums.com/t/tutorial-how-to-logcat.1726238/"]logs[/URL] (if applicable) and you can ask your query in xda, or open an issue in github for your device tree (recommended as it will easier to follow up and solve)
 [/LIST]
 
-Also thanks to @ravindu_deshan for making me go down this path (with me starting out by trying to debug his twrp (the device didnt have a touch driver) and testing his fastboot patcher)
-
-
-[COLOR="Violet"][SIZE="4"][B]Donation:[/B][/SIZE][/COLOR]
+[COLOR="Violet"][SIZE="4"][B]Help:[/B][/SIZE][/COLOR]
 [COLOR="LightGreen"]-> Consider giving the post a Thumbs up (👍)
 (or) 
 -> Star the device tree in Github, for telling that it works or showing your appreciation...[/COLOR]

@@ -1,0 +1,65 @@
+[CENTER][IMG="logo"]https://static1.xdaimages.com/wordpress/wp-content/uploads/2018/04/TWRP-logo-feature.png[/IMG][/CENTER]
+
+[CODE]
+
+* We are not responsible for bricked devices, dead SD cards,
+* thermonuclear war, or you getting fired because the alarm app failed. Please
+* do some research if you have any concerns about features included in this APP
+* before installing it! YOU are choosing to make these modifications, and if
+* you point the finger at us for messing up your device, We will laugh at you.
+
+[/CODE]
+
+
+[CENTER][COLOR="Violet"][SIZE="4"][B]TWRP Recovery for {{brand}} {{device}}[/B][/SIZE][/COLOR] [/CENTER]
+
+
+[COLOR="Violet"][SIZE="4"][B]What is TWRP?[/B][/SIZE][/COLOR]
+[URL="https://twrp.me"]Team Win Recovery Project[/URL] 3.x, or twrp for short, is a custom recovery built with ease of use and customization in mind. Its a fully touch driven user interface no more volume rocker or power buttons to mash. The GUI is also fully XML driven and completely theme-able. You can change just about every aspect of the look and feel.
+In short: It allows you to back up and restore your data, flash custom ROMs to your device, repair broken file systems, and root your device.
+
+[COLOR="Violet"][SIZE="4"][B]KNOWN LIMITATIONS:[/B][/SIZE][/COLOR]
+- Make sure to read the readme of the [URL="{{link}}"]device tree[/URL] once as it may contain specific info regarding the device.
+
+[COLOR="Violet"][SIZE="4"][B]Downloads:[/B][/SIZE][/COLOR]
+
+[B][SIZE="3"]Recovery:[/SIZE][/B] 
+[SIZE="5"][CENTER][URL="{{link}}"]Download Here (in releases, towards the right)[/URL][/CENTER][/SIZE]
+
+[COLOR="Violet"][SIZE="4"][B]PREREQUISITES:[/B][/SIZE][/COLOR]
+- Unlocked Bootloader
+
+[COLOR="Violet"][SIZE="4"][B]INSTRUCTIONS:[/B][/SIZE][/COLOR]
+
+[LIST=1]
+[*][B] Using fastboot: [COLOR="red"]"bootloader must be unlocked!"[/COLOR][/B]
+
+[CODE]adb reboot bootloader[/CODE]
+
+[CODE]fastboot flash recovery <recovery-name>.img[/CODE]
+- Reboot to recovery immediately and twrp should be present.
+
+
+
+[*][B] TWRP install requires TWRP 2.8.4 or higher already installed):[/B]
+
+- Reboot to TWRP
+- Hit  the "Install" button
+- Browse to the location of the TWRP image on your device and select it (tap the "Install Image" button in the lower right if it is not visible so that it shows the image list)
+- Select recovery from the partition list and swipe to flash
+[/LIST]
+
+
+[COLOR="Violet"][SIZE="4"][B]Bugs:[/B][/SIZE][/COLOR]
+- Cant see /data files as decryption doesnt work
+
+
+[COLOR="Violet"][SIZE="4"][B]Basic Info:[/B][/SIZE][/COLOR]
+[LIST]
+[*]Take [URL="https://xdaforums.com/t/tutorial-how-to-logcat.1726238/"]logs[/URL] (if applicable) and you can ask your query in xda, or open an issue in github for your device tree (recommended as it will easier to follow up and solve)
+[/LIST]
+
+[COLOR="Violet"][SIZE="4"][B]Help:[/B][/SIZE][/COLOR]
+[COLOR="LightGreen"]-> Consider giving the post a Thumbs up (👍)
+(or) 
+-> Star the device tree in Github, for telling that it works or showing your appreciation...[/COLOR]
